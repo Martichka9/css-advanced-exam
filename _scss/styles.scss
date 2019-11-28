@@ -1,0 +1,9 @@
+@import "_variables.scss";
+@import "_reset.scss";
+@import "_header-footer-styles.scss";
+
+#main-content {
+    min-height: calc(100vh - 170px);
+    width: 100%;
+}
+

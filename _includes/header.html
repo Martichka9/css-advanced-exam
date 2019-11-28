@@ -1,0 +1,15 @@
+<header id="header">
+    <div class="hf-container">
+        <div id="menu-icon"></div>
+        <nav id="nav">
+            <ul>
+                {% assign ordered_menu = site.pages | sort: "order" %}
+                {% for page in ordered_menu %}
+                    {% if page.title %}
+                        <li class="meniu-item"><a href="{{page.url}}">{{page.title}}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>
