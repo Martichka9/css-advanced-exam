@@ -22,6 +22,9 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - gulpfile.js
+  - package-lock.json
+  - package.json
   - node_modules
   - node_modules/
   - vendor/bundle/
