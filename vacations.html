@@ -1,0 +1,28 @@
+---
+title: Vacations
+layout: main
+permalink: /vacations/
+order: 2
+---
+<section>
+{% for record in site.data.records.vacations %}
+    {% if record.vac_type == "vacation" %}
+        <article>
+            <a href="{{site.baseurl}}/vacation/{{record.id}}">
+                <div>
+                    <img src="{{record.img}}">
+                    <h2>{{record.destination}}</h2>
+                    <h3>{{record.title}}</h3>
+                </div>
+                <div>
+                    <p>{{record.price}}</p>
+                    <p>от {{record.date_start}} до {{record.date_end}}</p>
+                    {% if record.discount > 0 %}
+                        <span>{{record.discount}}%</span>
+                    {% endif %}
+                </div>    
+            </a>        
+        </article>
+    {% endif %}
+{% endfor %}
+</section>
