@@ -2,7 +2,7 @@ title: Your awesome title
 email: your-email@example.com
 description: ""
 destination: docs
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/css-advanced-exam"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Martichka9
 
