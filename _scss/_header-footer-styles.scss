@@ -1,4 +1,4 @@
-#header, #footer {
+.site-header, .site-footer {
     height: 85px;
     width: 100%;
     background-color: aquamarine;
@@ -19,6 +19,7 @@
         
         ul {
             display: flex;
+            justify-content: space-evenly;
         }
 
         a {
@@ -30,6 +31,6 @@
 }   
 
 
-#footer p {
+.site-footer p {
     width: 100%;
 }

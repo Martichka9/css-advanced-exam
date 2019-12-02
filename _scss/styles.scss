@@ -2,8 +2,30 @@
 @import "_reset.scss";
 @import "_header-footer-styles.scss";
 
-#main-content {
+.site-main-content {
     min-height: calc(100vh - 170px);
     width: 100%;
+
+    .site-page-container {
+        max-width: $maxWidth;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: beige;
+
+        .record-card {
+            width:30%;
+            overflow: hidden;
+        }
+        
+        a {
+            display: grid;
+            grid-template-rows: 13em 7em;
+        }
+        img {
+            height: 13em;
+        }
+    }
 }
 

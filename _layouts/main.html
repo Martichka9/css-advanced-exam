@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/styles.css">
-    <title>CSS Advanced Exam Site</title>
+    <link rel="icon" href="{{site.baseurl}}/favicon.png">
+    <title>{{site.title}}{% if page.title != "Home" %} | {{page.title}} {% endif %}</title>
 </head>
 <body>
     {% include header.html %}
-    <main id="main-content">
+    <main class="site-main-content">
         {{content}}
     </main>
     {% include footer.html %}

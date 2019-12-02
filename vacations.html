@@ -4,17 +4,15 @@ layout: main
 permalink: /vacations/
 order: 2
 ---
-<section>
+<section class="site-page-container vacations">
 {% for record in site.data.records.vacations %}
     {% if record.vac_type == "vacation" %}
-        <article>
-            <a href="{{site.baseurl}}/vacation/{{record.id}}">
+        <article class="record-card">
+            <a id="{{record.id}}" href="{{{site.baseurl}}/vacation/{{record.id}}}" onClick="getId(this.id)">
+                <img src="{{record.img}}">
                 <div>
-                    <img src="{{record.img}}">
                     <h2>{{record.destination}}</h2>
                     <h3>{{record.title}}</h3>
-                </div>
-                <div>
                     <p>{{record.price}}</p>
                     <p>от {{record.date_start}} до {{record.date_end}}</p>
                     {% if record.discount > 0 %}
@@ -26,3 +24,9 @@ order: 2
     {% endif %}
 {% endfor %}
 </section>
+<script>
+function getId(id) {
+    localStorage.setItem('vacID', id);
+    console.log(id)
+}
+</script>
