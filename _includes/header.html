@@ -1,7 +1,11 @@
 <header class="site-header">
     <div class="hf-container">
-        <div id="site-menu-icon"></div>
-        <nav id="site-nav">
+        <a class="site-logo" href="/">
+            <img src="{{site.baseurl}}/favicon.png" alt="site-logo" style="max-width: 50px;">
+            <h1>Travel Inspired</h1>
+        </a>
+        <div class="site-menu-icon"></div>
+        <nav class="site-nav">
             <ul>
                 {% assign ordered_menu = site.pages | sort: "order" %}
                 {% for aPage in ordered_menu %}

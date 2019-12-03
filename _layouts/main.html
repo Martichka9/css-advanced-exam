@@ -8,9 +8,9 @@
     <link rel="icon" href="{{site.baseurl}}/favicon.png">
     <title>{{site.title}}{% if page.title != "Home" %} | {{page.title}} {% endif %}</title>
 </head>
-<body>
+<body class="site">
     {% include header.html %}
-    <main class="site-main-content">
+    <main class="site-main">
         {{content}}
     </main>
     {% include footer.html %}

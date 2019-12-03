@@ -1,12 +1,12 @@
 ---
-title: Почивки
+title: Екскурзии
 layout: main
-permalink: /vacations/
-order: 2
+permalink: /excursions/
+order: 3
 ---
 <section class="site-page-container vacations">
 {% for record in site.data.records.vacations %}
-    {% if record.vac_type == "vacation" %}
+    {% if record.vac_type == "excursion" %}
         <article class="record-card">
             <a id="{{record.id}}" href="{{{site.baseurl}}/vacation/{{record.id}}}" onClick="getId(this.id)">
                 <img src="{{record.img}}">
@@ -14,7 +14,7 @@ order: 2
                     <h2>{{record.destination}}</h2>
                     <h3>{{record.title}}</h3>
                     <p>{{record.price}}</p>
-                    <p>от {{record.date_start}} до {{record.date_end}}</p>
+                    <p>Дати: {{record.date_start}}</p>
                     {% if record.discount > 0 %}
                         <span>{{record.discount}}%</span>
                     {% endif %}

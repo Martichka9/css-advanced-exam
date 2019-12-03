@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: $shadowColor;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 ul {
