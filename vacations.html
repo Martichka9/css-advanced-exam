@@ -7,20 +7,7 @@ order: 2
 <section class="site-page-container vacations">
 {% for record in site.data.records.vacations %}
     {% if record.vac_type == "vacation" %}
-        <article class="record-card">
-            <a id="{{record.id}}" href="{{{site.baseurl}}/vacation/{{record.id}}}" onClick="getId(this.id)">
-                <img src="{{record.img}}">
-                <div>
-                    <h2>{{record.destination}}</h2>
-                    <h3>{{record.title}}</h3>
-                    <p>{{record.price}}</p>
-                    <p>от {{record.date_start}} до {{record.date_end}}</p>
-                    {% if record.discount > 0 %}
-                        <span>{{record.discount}}%</span>
-                    {% endif %}
-                </div>    
-            </a>        
-        </article>
+        {% include record-template.html %}
     {% endif %}
 {% endfor %}
 </section>

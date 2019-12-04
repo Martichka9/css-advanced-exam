@@ -1,0 +1,15 @@
+@media only screen and (max-width: 1040px) {
+    .hf-container{
+        justify-content: center;
+
+        .site-logo {
+            margin: 0 2.5em 0 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .site-nav {
+        display:none;
+    }
+}

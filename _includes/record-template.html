@@ -1,0 +1,24 @@
+<article class="record-card">
+    <a id="{{record.id}}" href="{{{site.baseurl}}/vacation/{{record.id}}}" onClick="getId(this.id)">
+        <img src="{{record.img}}">
+        <div class="vacation-short-info">
+            <h3>{{record.destination}}</h3>
+            <h4>{{record.title}}</h4>
+            <span class="price">{{record.price}} лв.</span>
+            <span class="dates">
+                {% if record.vac_type == "excursion" %}
+                    Дати:
+                {% else %}
+                    от
+                {% endif %} 
+                {{record.date_start}}
+                {% if record.vac_type != "excursion" %}
+                     до {{record.date_end}}
+                {% endif %}
+            </span>
+        </div> 
+        {% if record.discount > 0 %}
+            <span class="discount">-{{record.discount}}%</span>
+        {% endif %}
+    </a>        
+</article>
