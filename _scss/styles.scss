@@ -13,7 +13,7 @@
     background-size: cover;   
     font-family: 'Kurale', serif;
     font-size: 1.1em;
-    line-height: 18px;
+    line-height: 20px;
     
     &-main{
         min-height: calc(100vh - 170px);
@@ -36,13 +36,14 @@
             background-color: $primaryLightColor;
             box-shadow: 3px 2px 6px 2px $shadowColor;
             margin: 10px;
-            padding: 1em 1em 0.5em;
+            padding: 1em;
             border-radius: $borderRadius;
         }
         
         a {
             display: grid;
-            grid-template-rows: 12em 5em;
+            grid-template-rows: 12em auto;
+            gap: 0.5em;
         }
         img {
             height: 12em;
@@ -58,6 +59,7 @@
             text-align: center;
             align-items: center;
             grid-template-rows: auto auto auto;
+            gap: 0.5em;
 
             h3{grid-area: heading1;}
             h4{grid-area: heading2;}
@@ -95,9 +97,6 @@
         &.excursions {
             .record-card {
                 width: 400px;
-            }
-            a{
-                grid-template-rows: 12em 7em;
             }
         }
     }

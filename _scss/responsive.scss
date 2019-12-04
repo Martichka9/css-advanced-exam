@@ -15,10 +15,15 @@
 }
 
 @media only screen and (max-width: 380px) {
-    .site-page-container.excursions {
+    .site-page-container {
         .record-card {
-            a {grid-template-rows: 10em 10em;}
+            a {grid-template-rows: 10em auto;}
             img {height: 10em;}
+        }
+    }
+    .site-page-container.vacations {
+        .record-card {
+            a {grid-template-rows: 10em auto;}
         }
     }
 }
