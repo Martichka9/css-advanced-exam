@@ -57,7 +57,7 @@
                                 "price dates";
             text-align: center;
             align-items: center;
-            grid-template-rows: 1.5em 1.5em 2em;
+            grid-template-rows: auto auto auto;
 
             h3{grid-area: heading1;}
             h4{grid-area: heading2;}
@@ -98,9 +98,6 @@
             }
             a{
                 grid-template-rows: 12em 7em;
-            }
-            .vacation-short-info {
-                grid-template-rows: 2em 2em 3em;
             }
         }
     }

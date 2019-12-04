@@ -13,3 +13,12 @@
         display:none;
     }
 }
+
+@media only screen and (max-width: 380px) {
+    .site-page-container.excursions {
+        .record-card {
+            a {grid-template-rows: 10em 10em;}
+            img {height: 10em;}
+        }
+    }
+}
