@@ -16,7 +16,8 @@
 
         .site-menu label {
             position: relative;
-            display: block;
+            display: flex;
+            align-content: center;
             width: 100%;
         }
 
@@ -51,9 +52,6 @@
     .site-page-container .site-home-content h3 q:before {
         left: 10%;
     }
-}
-
-@media only screen and (max-width: 380px) {
     .site-page-container {
         .site-home-content {
             grid-template-rows: 0 135px;
@@ -66,12 +64,19 @@
                 left: 4%;
             }
         }
-        .site-home-content .home-img {width:80%;top: 0;}
+        .site-home-content .home-img, .site-home-content:nth-child(2) .home-img {width:80%;top: 13px;
+            left: 0;
+            right: 0;
+            margin: auto;}
         .record-card {
             a {grid-template-rows: 10em auto;}
             img {height: 10em;}
         }
     }
+}
+
+@media only screen and (max-width: 380px) {
+    
     .site-page-container.vacations {
         .record-card {
             a {grid-template-rows: 10em auto;}
