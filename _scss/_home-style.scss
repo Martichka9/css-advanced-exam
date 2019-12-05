@@ -16,6 +16,7 @@
 
     .home-img {
         max-width: 300px;
+        height: 215px;
         position: absolute;
         top: 35%;
         left: 10%;
@@ -53,7 +54,7 @@
         box-shadow: 3px 2px 6px 2px $shadowColor;
         
         q{grid-column: 2;padding-top: 0.3em;position: relative;}
-        div{grid-column: 2;grid-row: 3;}
+        div{grid-column: 2;grid-row: 3}
         q:before, q:after {
             font-size: 2em;
         }
