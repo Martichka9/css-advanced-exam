@@ -14,8 +14,26 @@
     }
 }
 
+@media only screen and (max-width: 540px) {
+    .site-page-container .site-home-content h3 q:before {
+        left: 10%;
+    }
+}
+
 @media only screen and (max-width: 380px) {
     .site-page-container {
+        .site-home-content {
+            grid-template-rows: 0 135px;
+        }
+        .site-home-content h3, .site-home-content:nth-child(2) h3 {
+            grid-template-columns: auto auto auto;
+            width: 100%;
+            grid-column: 1/5;
+            q:before {
+                left: 4%;
+            }
+        }
+        .site-home-content .home-img {width:80%;top: 0;}
         .record-card {
             a {grid-template-rows: 10em auto;}
             img {height: 10em;}
