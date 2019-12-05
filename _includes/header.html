@@ -4,16 +4,19 @@
             <img src="{{site.baseurl}}/favicon.png" alt="site-logo" style="max-width: 50px;">
             <h1>{{site.title}}</h1>
         </a>
-        <div class="site-menu-icon"></div>
-        <nav class="site-nav">
-            <ul>
-                {% assign ordered_menu = site.pages | sort: "order" %}
-                {% for aPage in ordered_menu %}
-                    {% if aPage.title %}
-                        <li class="site-menu-item {% if aPage.url == page.url %}current-page{% endif %}"><a href="{{site.baseurl}}{{aPage.url}}">{{aPage.title}}</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </nav>
+        <div class="site-menu">
+            <label for="menu-btn"><i class="fas fa-map-signs"></i></label>
+            <input type="checkbox" id="menu-btn" />
+            <nav class="site-nav">
+                <ul>
+                    {% assign ordered_menu = site.pages | sort: "order" %}
+                    {% for aPage in ordered_menu %}
+                        {% if aPage.title %}
+                            <li class="site-menu-item {% if aPage.url == page.url %}current-page{% endif %}"><a href="{{site.baseurl}}{{aPage.url}}">{{aPage.title}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </nav>
+        </div>
     </div>
 </header>

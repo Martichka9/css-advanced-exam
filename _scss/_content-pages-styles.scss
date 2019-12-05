@@ -1,0 +1,72 @@
+.record-card {
+    width: 321px;
+    position: relative;
+    overflow: hidden;
+    background-color: $primaryLightColor;
+    box-shadow: 3px 2px 6px 2px $shadowColor;
+    margin: 10px;
+    padding: 1em;
+    border-radius: $borderRadius;
+    line-height: 20px;
+    
+    a {
+        display: grid;
+        grid-template-rows: 12em auto;
+        gap: 0.5em;
+    }
+    img {
+        height: 12em;
+        border-radius:  $borderRadius;
+        border: 1px solid $bgBlue;
+    }
+
+    .vacation-short-info {
+        display: grid;
+        grid-template-areas:"heading1 heading1"
+                            "heading2 heading2"
+                            "price dates";
+        text-align: center;
+        align-items: center;
+        grid-template-rows: auto auto auto;
+        gap: 0.5em;
+
+        h3{grid-area: heading1;}
+        h4{grid-area: heading2;}
+        span.price{
+            grid-area: price;
+            font-size: 1.8em;
+            font-weight: bold;
+            justify-self: right;
+            color: $bgOrange;
+            text-shadow: 0px 0px 1px $shadowColor;
+        }
+        span.dates{
+            grid-area: dates;
+            align-self: end;
+            justify-self: right;
+            font-size: 0.8em;
+        }
+    }
+
+    .discount {
+        position: absolute;
+        background: $discountColor;
+        color: $primaryLightColor;
+        text-align: center;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        padding: 16px 0;
+        top: 8%;
+        right: 2%;
+        text-shadow: 1px 1px 1px $shadowColor;
+        box-shadow: 2px 2px 3px $shadowColor;
+    }
+
+}
+
+.excursions {
+    .record-card {
+        width: 400px;
+    }
+}

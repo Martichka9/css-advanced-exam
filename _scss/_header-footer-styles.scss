@@ -21,7 +21,12 @@
         font-family: 'Amatic SC', cursive;
         text-shadow: /*0 0 1px $shadowColor, 0 0 25px 5px #a6b3bd inset, */2px 2px 2px $shadowColor;
     }
-
+    .site-menu #menu-btn {
+        display: none;
+    }
+    .site-menu label {
+        display: none;
+    }
     nav{
 
         ul {
