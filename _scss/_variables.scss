@@ -9,3 +9,36 @@ $bgBlue: #92a7b9;
 $bgOrange: #f1a57e;
 $bgLight: #f7f4f3;
 $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
+
+@mixin infoArticleLayout {
+    text-align: center;
+    position: relative;
+    width: 90%;
+    min-height: 300px;
+    max-width: $maxWidth;
+    background-color: rgba($shadowColor,0.5);
+    padding: 1em;
+    border-radius: .5em 2.8em;
+    margin: 2%;
+}
+
+@mixin infoImgs {
+    max-width: 300px;
+    height: 200px;
+    position: absolute;
+    top: calc(50% - 100px);
+    border-radius: 3px;
+    opacity: .8;
+    overflow: hidden;
+}
+
+@mixin infoTexts {
+    width: 70%;
+    position: relative;
+    font-style: italic;
+    text-shadow: 0 0 3px $shadowColor;
+    background-color: rgba($bgBlue,0.5) ;
+    padding: 1em;
+    border-radius: .5em 2.8em;
+    box-shadow: 3px 2px 6px 2px $shadowColor;
+}

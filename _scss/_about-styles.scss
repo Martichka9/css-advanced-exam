@@ -1,0 +1,29 @@
+.site-info-content {
+
+    blockquote {
+        @include infoTexts;
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        
+        p{
+            color: white;
+            text-shadow: 0 0 3px #000;
+        }
+    }
+    &:nth-child(odd) {
+        blockquote {
+            right: -30%;
+            text-align: right;
+            
+        }
+    }
+    
+    &:nth-child(even) {
+        .info-img {
+            right: 2%;
+            left: initial;
+        }
+    }
+}

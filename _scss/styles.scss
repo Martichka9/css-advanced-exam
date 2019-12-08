@@ -7,6 +7,7 @@
 @import "./fa/css/fontawesome.min.css";
 @import "./fa/css/solid.min.css";
 @import "_home-style.scss";
+@import "_about-styles.scss";
 @import "_content-pages-styles.scss";
 
 /*Main site styles*/
@@ -30,5 +31,12 @@
         flex-wrap: wrap;
         justify-content: center;
         padding: 2em 0;
+    }
+    &-info-content {
+        @include infoArticleLayout;
+        
+        .info-img {
+            @include infoImgs;
+        }
     }
 }

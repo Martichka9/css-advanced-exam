@@ -6,18 +6,11 @@ baseurl: "/css-advanced-exam"
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Martichka9
 collections: 
-  vacation:
+  vacations:
     output: true
-    permalink: /:collection/:name/
-  excursion:
+  excursions:
     output: true
-collections_dir: site-collections
-defaults:
-  scope:
-    path: ""
-    type: "vacation"
-  values:
-    layout: main
+collections_dir: collections
 
 # Build settings
 
