@@ -66,5 +66,5 @@ gulp.task("watch", function() {
 gulp.task("default", gulp.series('jekyll-dev', 'sass', 'copy', 'watch'));
 
 gulp.task("deploy", gulp.series('jekyll', 'sass', 'copy' , function() {
-	return cp.spawn('git status && git commit -am "Update" && git pull && git push', { stdio: "inherit", shell: true });
+	return cp.spawn('git status && git commit -am "Update docs folder for GHPages" && git pull && git push', { stdio: "inherit", shell: true });
 }));
