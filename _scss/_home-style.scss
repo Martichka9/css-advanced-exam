@@ -16,7 +16,6 @@
         text-shadow: 0 0 6px $shadowColor;
     }
     h3.info-text {
-        @include infoTexts;
         grid-row: 2;
         display: grid;
         grid-template-columns: 10% auto 10%;

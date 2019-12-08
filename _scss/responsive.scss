@@ -8,6 +8,18 @@
     }
 }
 
+@media only screen and (max-width: 960px) {
+    .site-page-container.contacts article.site-info-content {
+        display: block;
+        .info-text{
+            margin: 1em auto;
+        }
+        .map{
+            width: 95%;
+        }
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .hf-container  {
         .site-nav {
@@ -49,7 +61,7 @@
 }
 
 @media only screen and (max-width: 720px) {
-    .site-page-container {
+    .site-page-container.about, .site-page-container.home {
         .info-text {
             width: 100%;
         }
@@ -57,9 +69,13 @@
             right: 0;
             width: 100%;
         }
-        article .info-img {         
+        .site-info-content .info-img,
+        .site-info-content:nth-child(even) .info-img {
+            width:80%;
+            top: 10%;
             left: 0;
-            margin: 0 5%;
+            right: 0;
+            margin: auto;
         }
         .site-info-content .home-img,
         article:nth-child(even) .home-img {
@@ -68,6 +84,17 @@
             right: 0;
             margin: 0 auto;
         }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .site-page-container.contacts a.contact-info, .site-page-container.contacts div.contact-info {
+        grid-template-areas: "ico ico ico" "txt txt txt"
+                             "contact1 contact1 contact1"
+                             "contact2 contact2 contact2"
+                             "contact3 contact3 contact3";
+        grid-template-rows: 50px auto auto auto auto;
+        &:nth-child(4) i{grid-row: 1;}
     }
 }
 
@@ -80,14 +107,6 @@
             width: 100%;
             grid-column: 1/5;
 
-        }
-        .site-info-content .info-img,
-        .site-info-content:nth-child(even) .info-img {
-            width:80%;
-            top: 10%;
-            left: 0;
-            right: 0;
-            margin: auto;
         }
         .record-card {
             a {grid-template-rows: 10em auto;}
@@ -102,5 +121,9 @@
         .record-card {
             a {grid-template-rows: 10em auto;}
         }
+    }
+    .site-page-container.contacts .contact-info:nth-child(4) .hours:nth-of-type(1) {   
+        width: 180px;
+        margin: 0 auto;
     }
 }

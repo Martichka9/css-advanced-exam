@@ -4,10 +4,11 @@
 @import url('https://fonts.googleapis.com/css?family=Kurale&display=swap');
 @import "_header-footer-styles.scss";
 @import 'responsive.scss';
-@import "./fa/css/fontawesome.min.css";
-@import "./fa/css/solid.min.css";
+// @import "./fa/css/fontawesome.min.css";
+// @import "./fa/css/solid.min.css";
 @import "_home-style.scss";
 @import "_about-styles.scss";
+@import "_contacts-styles.scss";
 @import "_content-pages-styles.scss";
 
 /*Main site styles*/
@@ -34,7 +35,14 @@
     }
     &-info-content {
         @include infoArticleLayout;
-        
+        .info-text {
+            @include infoTexts;
+                
+            p, a, i, span{
+                color: white;
+                text-shadow: 0 0 3px #000;
+            }
+        }
         .info-img {
             @include infoImgs;
         }

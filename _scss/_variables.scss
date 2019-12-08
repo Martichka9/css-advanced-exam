@@ -13,13 +13,13 @@ $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
 @mixin infoArticleLayout {
     text-align: center;
     position: relative;
-    width: 90%;
+    width: 95%;
     min-height: 300px;
     max-width: $maxWidth;
     background-color: rgba($shadowColor,0.5);
     padding: 1em;
     border-radius: .5em 2.8em;
-    margin: 2%;
+    margin: 2% 0;
 }
 
 @mixin infoImgs {

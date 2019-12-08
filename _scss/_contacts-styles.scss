@@ -1,0 +1,56 @@
+.site-page-container.contacts{
+    .site-info-content{
+        display: grid;
+        grid-template-areas:
+            "texts map"
+            "texts map";
+        grid-template-columns: repeat(2, 1fr);
+        
+        div.info-text {
+            grid-area: texts;
+            width: 95%;
+        }
+        .map {
+            grid-area: map;
+            box-shadow: 3px 2px 6px 2px #1b1f23;
+            border-radius: .4em 2.8em;
+            border: 2px solid #1b1f23;
+        }
+    }
+    .contact-info {
+        display: grid;
+        width: 100%;
+        grid-template-areas: "ico txt txt" "ico contact1 contact1" "ico contact2 contact2" "ico contact3 contact3";
+        grid-template-columns: 50px auto auto;
+        grid-template-rows: 25px auto auto auto;
+        align-items: center;
+        text-align: center;
+        padding: 1em 0;
+        border-bottom: 1px solid white;
+
+        i {
+            grid-area: ico;
+            font-size: 1.5em;
+        }
+        .contact-text-info{
+            grid-area: txt;
+        }
+        .contact-ct-info{
+            grid-area: contact1;
+        }
+        
+        &:nth-child(4) {
+            i{grid-row: 2;}
+            
+            .hours:nth-of-type(1){
+                grid-area: txt;
+            }
+            .hours:nth-of-type(2){
+                grid-area: contact1;
+            }
+            .hours:nth-of-type(3){
+                grid-area: contact2;
+            }
+        }
+    }
+}
