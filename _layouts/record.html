@@ -1,0 +1,18 @@
+---
+layout: main
+---
+<img src="{{page.img}}">
+<h2>{{page.destination}} - {{page.title}}</h2>
+{% if page.discount > 0 %}
+<span>{{page.discount}}</span>
+{% endif %}
+<p>{{page.price}}</p>
+<p>Dati: {{page.date_start}} - {{page.date_end}}</p>
+{% if page.description %}
+    <p>{{page.description}}</p>
+{% else %}
+    <p>{{page.content}}</p>
+{% endif %}
+<p>{{page.meal}}</p>
+<p>{{page.types}}</p>
+{{content}}

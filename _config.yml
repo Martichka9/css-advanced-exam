@@ -11,7 +11,7 @@ collections:
     permalink: /vacations/:path
   excursions:
     output: true
-    permalink: /excursions/:name
+    permalink: /excursions/:path
 collections_dir: collections
 
 # Build settings

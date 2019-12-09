@@ -1,0 +1,26 @@
+---
+title:
+layout: main
+permalink: /test/
+order: 123
+---
+<section class="site-page-container vacations">
+    <ul>
+        {% assign siteData = site.data.records.vacations %}
+        {% for record in siteData %}
+            <li>
+                {{record.id}} - {{record.title}}
+            </li>
+        {% endfor %}
+    </ul>
+<br/>
+<br/>
+<ul>
+    {% assign siteCollection = site.vacations %}
+    {% for record in siteCollection %}
+        <li>
+            <a href="{{site.baseurl}}{{record.id}}.html">{{record.id}} - {{record.content}}</a>
+        </li>
+    {% endfor %}
+</ul>
+</section>
