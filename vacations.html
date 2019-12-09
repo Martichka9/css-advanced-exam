@@ -5,9 +5,14 @@ permalink: /vacations/
 order: 2
 ---
 <section class="site-page-container vacations">
-{% for record in site.data.records.vacations %}
-    {% if record.vac_type == "vacation" %}
+    <article class="site-info-content">
+        <div class="info-text">
+            <h3>Избрахте ли най-подходящото място за вашата следваща ваканция?</h3>
+            <p>Разгледайте нашите предложения за почивки:</p>
+        </div>
+    </article>
+    {% assign siteCollection = site.vacations %}
+    {% for record in siteCollection %}
         {% include record-template.html %}
-    {% endif %}
-{% endfor %}
+    {% endfor %}
 </section>

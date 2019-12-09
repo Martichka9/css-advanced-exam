@@ -33,6 +33,7 @@
         justify-content: center;
         padding: 2em 0;
     }
+    /*Home, About, Contacts styles*/
     &-info-content {
         @include infoArticleLayout;
         .info-text {
@@ -46,5 +47,21 @@
         .info-img {
             @include infoImgs;
         }
+
+        div.info-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+    
+            h3 {
+                font-size: 1.7em;    
+                text-align: center;
+            }
+        }
+    }
+    /*404 page style*/
+    .fof {
+        .info-text {height: 100%;}
     }
 }

@@ -61,12 +61,9 @@
 }
 
 @media only screen and (max-width: 720px) {
-    .site-page-container.about, .site-page-container.home {
+    section.site-page-container{padding: 1em;}
+    .about, .home {
         .info-text {
-            width: 100%;
-        }
-        article:nth-child(odd) .info-text, article:nth-child(even) .info-text, :not(h3) {
-            right: 0;
             width: 100%;
         }
         .site-info-content .info-img,
@@ -84,11 +81,17 @@
             right: 0;
             margin: 0 auto;
         }
+        .site-info-content .info-text, :not(h3), :not(h2) {
+            right: 0;
+            width: 100%;
+            text-align: justify;
+        }
+        h2 {text-align: center;}
     }
 }
 
 @media only screen and (max-width: 480px) {
-    .site-page-container.contacts a.contact-info, .site-page-container.contacts div.contact-info {
+    .site-page-container.contacts .contact-info {
         grid-template-areas: "ico ico ico" "txt txt txt"
                              "contact1 contact1 contact1"
                              "contact2 contact2 contact2"
@@ -116,7 +119,7 @@
 }
 
 @media only screen and (max-width: 380px) {
-    
+    .site-header {padding:1em;}
     .site-page-container.vacations {
         .record-card {
             a {grid-template-rows: 10em auto;}

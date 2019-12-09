@@ -30,7 +30,8 @@
         }
         div{
             grid-column: 2;
-            grid-row: 3
+            grid-row: 3;
+            text-align: right;
         }
         q:before, q:after {
             font-size: 2em;

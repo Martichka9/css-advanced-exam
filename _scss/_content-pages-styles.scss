@@ -65,6 +65,11 @@
 
 }
 
+.vacations .site-info-content,
+.excursions .site-info-content {
+    min-height: 0;
+}
+
 .excursions {
     .record-card {
         width: 400px;

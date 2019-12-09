@@ -8,8 +8,10 @@ github_username:  Martichka9
 collections: 
   vacations:
     output: true
+    permalink: /vacations/:path
   excursions:
     output: true
+    permalink: /excursions/:name
 collections_dir: collections
 
 # Build settings
