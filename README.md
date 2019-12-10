@@ -1,5 +1,4 @@
-# css-advanced-exam
-CSS Advanced exam site
+# CSS Advanced exam site
 
 ## Github Pages
 https://martichka9.github.io/css-advanced-exam/
