@@ -3,7 +3,7 @@ email: your-email@example.com
 description: ""
 destination: docs
 baseurl: "/css-advanced-exam"
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: ""
 github_username:  Martichka9
 collections: 
   vacations:
@@ -14,16 +14,6 @@ collections:
     permalink: /excursions/:path
 collections_dir: collections
 
-# Build settings
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
 exclude:
   - .sass-cache/
   - .jekyll-cache/
