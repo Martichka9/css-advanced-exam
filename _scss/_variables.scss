@@ -42,3 +42,14 @@ $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
     border-radius: .5em 2.8em;
     box-shadow: 3px 2px 6px 2px $shadowColor;
 }
+
+@mixin recordCards {
+    position: relative;
+    overflow: hidden;
+    background-color: $primaryLightColor;
+    box-shadow: 3px 2px 6px 2px $shadowColor;
+    margin: 10px;
+    padding: 1em;
+    border-radius: $borderRadius;
+    line-height: 20px;
+}

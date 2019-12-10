@@ -90,17 +90,6 @@
     }
 }
 
-@media only screen and (max-width: 480px) {
-    .site-page-container.contacts .contact-info {
-        grid-template-areas: "ico ico ico" "txt txt txt"
-                             "contact1 contact1 contact1"
-                             "contact2 contact2 contact2"
-                             "contact3 contact3 contact3";
-        grid-template-rows: 50px auto auto auto auto;
-        &:nth-child(4) i{grid-row: 1;}
-    }
-}
-
 @media only screen and (max-width: 540px) {
     .site-page-container {
         .site-info-content {
@@ -116,6 +105,18 @@
             img {height: 10em;}
         }
     }
+}
+
+@media only screen and (max-width: 480px) {
+    .site-page-container.contacts .contact-info {
+        grid-template-areas: "ico ico ico" "txt txt txt"
+                             "contact1 contact1 contact1"
+                             "contact2 contact2 contact2"
+                             "contact3 contact3 contact3";
+        grid-template-rows: 50px auto auto auto auto;
+        &:nth-child(4) i{grid-row: 1;}
+    }
+    .record-card .vacation-short-info span.dates {align-self: start !important;}
 }
 
 @media only screen and (max-width: 380px) {

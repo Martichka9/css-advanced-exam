@@ -1,13 +1,6 @@
 .record-card {
+    @include recordCards;
     width: 321px;
-    position: relative;
-    overflow: hidden;
-    background-color: $primaryLightColor;
-    box-shadow: 3px 2px 6px 2px $shadowColor;
-    margin: 10px;
-    padding: 1em;
-    border-radius: $borderRadius;
-    line-height: 20px;
     
     a {
         display: grid;
@@ -73,5 +66,41 @@
 .excursions {
     .record-card {
         width: 400px;
+    }
+}
+
+.record-single-details {
+    .record-card {
+        width: 100%;
+        min-height: 500px;
+        text-align: center;
+        margin: 0;
+
+        .img-discount-container {
+            position: relative;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+        img {height: auto;}
+        .discount {right: -5%;}
+        .vacation-short-info {
+            grid-template-areas:"heading1 heading1"
+                                "price dates"
+                                "description description"
+                                "type type"
+                                "meal meal";
+            gap: 1em;
+            padding: 0 2em;
+        }
+        span.dates {justify-self: unset;}
+        .description {grid-area: description; text-align: justify;}
+        .types {grid-area: type;}
+        .meal {grid-area: meal;}
+
+        .types,
+        .meal {text-align: left;}
+
+        ul{padding-left: 31px;}
+        li {list-style-type: disc;}
     }
 }

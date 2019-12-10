@@ -1,18 +1,48 @@
 ---
 layout: main
 ---
-<img src="{{page.img}}">
-<h2>{{page.destination}} - {{page.title}}</h2>
-{% if page.discount > 0 %}
-<span>{{page.discount}}</span>
-{% endif %}
-<p>{{page.price}}</p>
-<p>Dati: {{page.date_start}} - {{page.date_end}}</p>
-{% if page.description %}
-    <p>{{page.description}}</p>
-{% else %}
-    <p>{{page.content}}</p>
-{% endif %}
-<p>{{page.meal}}</p>
-<p>{{page.types}}</p>
-{{content}}
+<section class="site-page-container record-single-details">
+    <article class="record-card">
+        <div class="img-discount-container">
+            {% if page.discount > 0 %}
+                <span class="discount">-{{page.discount}}%</span>
+            {% endif %}
+            <img src="{{page.img}}">
+        </div>
+        <div class="vacation-short-info">
+            <h3>{{page.title}} - {{page.destination}}</h3>
+            <p>Цена: <span class="price">{{page.price}} лв.</span></p>
+            <span class="dates">
+                {% if page.vac_type == "excursion" %}
+                    Дати:
+                {% else %}
+                    от
+                {% endif %} 
+                {{page.date_start}}
+                {% if page.vac_type != "excursion" %}
+                     до {{page.date_end}}
+                {% endif %}
+            </span>
+            
+            <span class="description">
+                {% if page.description %}
+                    {{page.description}}
+                {% else %}
+                    {{page.content}}
+                {% endif %}
+            </span>
+
+            {% if page.vac_type == "vacation" %}
+                <span class="types">
+                    Варианти:
+                    <ul>
+                        {% for aType in page.types %}
+                            <li>{{aType}}</li>
+                        {% endfor %}
+                    </ul> 
+                </span>
+                <span class="meal">Храна: {{page.meal}}</span>
+            {% endif %}
+        </div> 
+    </article>
+</section>
