@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{site.baseurl}}/css/styles.css">
     <link rel="stylesheet" href="{{site.baseurl}}/css/fa/css/fontawesome.min.css">
     <link rel="stylesheet" href="{{site.baseurl}}/css/fa/css/solid.min.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/fa/css/brands.min.css">
     <link rel="icon" href="{{site.baseurl}}/favicon.png">
     <title>{{site.title}}{% if page.title != "Home" %} | {{page.title}} {% endif %}</title>
 </head>
@@ -20,6 +21,18 @@
     <script>
         window.addEventListener('load', (event) => {
             document.querySelector('body').classList.add('loaded');
+            window.onscroll = function() {myFunction()};
+
+            var header = document.getElementsByClassName("site-header")[0];
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
         });
     </script>
 </body>

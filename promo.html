@@ -1,0 +1,20 @@
+---
+layout: main
+permalink: /promo/
+page_type: filtered
+page_name: Промоции
+---
+<section class="site-page-container vacations">
+    <article class="site-info-content">
+        <div class="info-text">
+            <h3>Промоциите винаги са на мода!</h3>
+            <p>Изберете вашата промоционална оферта сега!</p>
+        </div>
+    </article>
+    {% assign siteCollection = site.vacations %}
+    {% for record in siteCollection %}
+        {% if record.vac_type == "vacation" and record.group contains "promo" %}
+                {% include record-template.html %}
+        {% endif %}
+    {% endfor %}
+</section>

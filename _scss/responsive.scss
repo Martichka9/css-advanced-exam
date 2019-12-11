@@ -18,6 +18,12 @@
             width: 95%;
         }
     }
+    .site-footer {
+        .block {
+            margin: 0.2em;
+        }
+        p{text-align: left;}
+    }
 }
 
 @media only screen and (max-width: 768px) {

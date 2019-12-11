@@ -1,12 +1,18 @@
 .site-header, .site-footer {
+    @include headerFooterContainer;
     height: 85px;
-    width: 100%;
-    background-color: $primaryLightColor;
-    box-shadow: 0px 0px 9px 3px $shadowColor, 0 0 25px 5px $insetShadowColor inset;
 }
+/*Stiky header on scroll*/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+.site-footer {min-height: 150px;height: 100%;}
 
 .hf-container {
-    //width: 80%;
+    align-self: center;
     max-width: $maxWidth;
     height: 100%;
     margin: 0 auto;
@@ -18,7 +24,7 @@
     .site-logo{
         display: flex;
         align-items: center;
-        font-family: 'Amatic SC', cursive;
+        font-family: 'Amatic SC', 'Buxton Sketch', 'Inc Free', cursive;
         text-shadow: /*0 0 1px $shadowColor, 0 0 25px 5px #a6b3bd inset, */2px 2px 2px $shadowColor;
     }
     .site-menu #menu-btn {
@@ -60,7 +66,42 @@
 
 .site-footer {
     padding: 1em;
-    p {
-        margin: 0 auto;
+    .hf-container{flex-wrap: wrap;}
+    
+    ul, h3, p {
+        text-align: left;
     }
+
+    .block {
+        padding:5px;
+        height: 100%;
+        width: 300px;
+        
+        .sm {
+            font-size: 1.7em;
+            margin: 0 3px;
+        }
+        .fb:hover i {
+            color: #3b5998;
+
+        }
+        .tr:hover i {
+            color: #0084b4;
+
+        }
+        .fr:hover i {
+            color: #ff0084;
+
+        }
+    }
+    .offers a {
+        padding: 0.1em;
+    }
+    .offers a:hover {
+        border-bottom: 1px solid $shadowColor;
+        box-shadow: 1px 0 2px 0 $shadowColor;
+    }
+    hr{margin: 10px 0 5px;}
+    
+    p{font-size: .8em;align-self: flex-end;justify-self: flex-end;text-align: right;}
 }

@@ -1,5 +1,28 @@
 <footer class="site-footer">
     <div class="hf-container">
-        <p>CSS Advanced November 2019 Exam Site &copy; All rights reserved</p>
+            <div class="offers block">
+                <h3>Категории:</h3>
+                <ul>
+                    {% for page in site.pages %}
+                        {% if page.page_name %}
+                            <li><a href="{{site.baseurl}}{{page.url}}">{{page.page_name}}</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>    
+            </div>
+            <div class="contacts block">
+                <h3>Контакти:</h3>
+                <ul>
+                    <li><a href="tel:+359987654321"><i class="fas fa-phone-alt"></i>+359 987 654 321</a></li>
+                    <li><a href="mailto:{{site.email}}"><i class="fas fa-at"></i> {{site.email}}</a></li>
+                    <li class="sm-links">
+                        <hr/>
+                        <a class="sm fb" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a class="sm tr" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a class="sm fr" href="https://www.flickr.com/" target="_blank"><i class="fab fa-flickr"></i></a>
+                    </li>
+                </ul>    
+            </div>
+        <p class="block">CSS Advanced November 2019 Exam Site &copy; All rights reserved</p>
     </div>
 </footer>

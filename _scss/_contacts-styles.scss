@@ -2,10 +2,16 @@
     .site-info-content{
         display: grid;
         grid-template-areas:
+            "heading heading"
             "texts map"
             "texts map";
         grid-template-columns: repeat(2, 1fr);
         
+        & > h2 {
+            grid-area: heading;
+            font-size: 2em;
+            width: 100%;
+        }
         div.info-text {
             grid-area: texts;
             width: 95%;

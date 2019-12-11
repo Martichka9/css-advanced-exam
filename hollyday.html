@@ -1,0 +1,20 @@
+---
+layout: main
+permalink: /hollyday/
+page_type: filtered
+page_name: Празнични предложения
+---
+<section class="site-page-container vacations">
+    <article class="site-info-content">
+        <div class="info-text">
+            <h3>Коледните празници наближават!</h3>
+            <p>Разгледайте нашите предложения и изберете къде да прекарате незабравими моменти с близките си!</p>
+        </div>
+    </article>
+    {% assign siteCollection = site.vacations %}
+    {% for record in siteCollection %}
+        {% if record.vac_type == "vacation" and record.group contains "hollyday" %}
+                {% include record-template.html %}
+        {% endif %}
+    {% endfor %}
+</section>

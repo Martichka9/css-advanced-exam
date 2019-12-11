@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css-advanced-exam/css/styles.css">
-    <link rel="stylesheet" href="/css-advanced-exam/css/fa/css/fontawesome.min.css">
-    <link rel="stylesheet" href="/css-advanced-exam/css/fa/css/solid.min.css">
-    <link rel="icon" href="/css-advanced-exam/favicon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/fa/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/css/fa/css/solid.min.css">
+    <link rel="stylesheet" href="/css/fa/css/brands.min.css">
+    <link rel="icon" href="/favicon.png">
     <title>Travel Inspire | Пирин Голф & Кънтри Клуб 4* </title>
 </head>
 <body class="site">
     <header class="site-header">
     <div class="hf-container">
-        <a class="site-logo" href="/css-advanced-exam/">
-            <img src="/css-advanced-exam/favicon.png" alt="site-logo" style="max-width: 50px;">
+        <a class="site-logo" href="/">
+            <img src="/favicon.png" alt="site-logo" style="max-width: 50px;">
             <h1>Travel Inspire</h1>
         </a>
         <div class="site-menu">
@@ -29,23 +30,31 @@
                         
                     
                         
-                            <li class="site-menu-item "><a href="/css-advanced-exam/">Начало</a></li>
+                    
                         
                     
                         
-                            <li class="site-menu-item "><a href="/css-advanced-exam/vacations/">Почивки</a></li>
+                    
                         
                     
                         
-                            <li class="site-menu-item "><a href="/css-advanced-exam/excursions/">Екскурзии</a></li>
+                            <li class="site-menu-item "><a href="/">Начало</a></li>
                         
                     
                         
-                            <li class="site-menu-item "><a href="/css-advanced-exam/about/">За нас</a></li>
+                            <li class="site-menu-item "><a href="/vacations/">Почивки</a></li>
                         
                     
                         
-                            <li class="site-menu-item "><a href="/css-advanced-exam/contacts/">Контакти</a></li>
+                            <li class="site-menu-item "><a href="/excursions/">Екскурзии</a></li>
+                        
+                    
+                        
+                            <li class="site-menu-item "><a href="/about/">За нас</a></li>
+                        
+                    
+                        
+                            <li class="site-menu-item "><a href="/contacts/">Контакти</a></li>
                         
                     
                         
@@ -102,13 +111,76 @@
     </main>
     <footer class="site-footer">
     <div class="hf-container">
-        <p>CSS Advanced November 2019 Exam Site &copy; All rights reserved</p>
+            <div class="offers block">
+                <h3>Категории:</h3>
+                <ul>
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/hollyday/">Празнични предложения</a></li>
+                        
+                    
+                        
+                    
+                        
+                            <li><a href="/promo/">Промоции</a></li>
+                        
+                    
+                        
+                            <li><a href="/sea/">Море</a></li>
+                        
+                    
+                        
+                            <li><a href="/spa/">SPA</a></li>
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                </ul>    
+            </div>
+            <div class="contacts block">
+                <h3>Контакти:</h3>
+                <ul>
+                    <li><a href="tel:+359987654321"><i class="fas fa-phone-alt"></i>+359 987 654 321</a></li>
+                    <li><a href="mailto:travel@travelinspire.com"><i class="fas fa-at"></i> travel@travelinspire.com</a></li>
+                    <li class="sm-links">
+                        <hr/>
+                        <a class="sm fb" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a class="sm tr" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                        <a class="sm fr" href="https://www.flickr.com/" target="_blank"><i class="fab fa-flickr"></i></a>
+                    </li>
+                </ul>    
+            </div>
+        <p class="block">CSS Advanced November 2019 Exam Site &copy; All rights reserved</p>
     </div>
 </footer>
     
     <script>
         window.addEventListener('load', (event) => {
             document.querySelector('body').classList.add('loaded');
+            window.onscroll = function() {myFunction()};
+
+            var header = document.getElementsByClassName("site-header")[0];
+            var sticky = header.offsetTop;
+
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
         });
     </script>
 </body>

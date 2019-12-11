@@ -1,5 +1,5 @@
 title: Travel Inspire
-email: your-email@example.com
+email: travel@travelinspire.com
 description: ""
 destination: docs
 baseurl: "/css-advanced-exam"
@@ -7,8 +7,6 @@ url: ""
 github_username:  Martichka9
 collections: 
   vacations:
-    output: true
-  excursions:
     output: true
 collections_dir: collections
 

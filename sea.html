@@ -1,0 +1,20 @@
+---
+layout: main
+permalink: /sea/
+page_type: filtered
+page_name: Море
+---
+<section class="site-page-container vacations">
+    <article class="site-info-content">
+        <div class="info-text">
+            <h3>„Ах, Морето!“ </h3>
+            <p>Планирате ли вече лятната си почивка? Разгледайте нашите ранни летни оферти!</p>
+        </div>
+    </article>
+    {% assign siteCollection = site.vacations %}
+    {% for record in siteCollection %}
+        {% if record.vac_type == "vacation" and record.group contains "sea" %}
+                {% include record-template.html %}
+        {% endif %}
+    {% endfor %}
+</section>

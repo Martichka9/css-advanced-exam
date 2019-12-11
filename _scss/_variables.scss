@@ -10,6 +10,12 @@ $bgOrange: #f1a57e;
 $bgLight: #f7f4f3;
 $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
 
+@mixin headerFooterContainer{
+    width: 100%;
+    background-color: $primaryLightColor;
+    box-shadow: 0px 0px 9px 3px $shadowColor, 0 0 25px 5px $insetShadowColor inset;
+}
+
 @mixin infoArticleLayout {
     text-align: center;
     position: relative;
@@ -17,9 +23,9 @@ $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
     min-height: 300px;
     max-width: $maxWidth;
     background-color: rgba($shadowColor,0.5);
-    padding: 1em;
     border-radius: .5em 2.8em;
     margin: 2% 0;
+    padding: 1em;
 }
 
 @mixin infoImgs {

@@ -17,7 +17,7 @@
     background-image: url("https://images.unsplash.com/photo-1571993192866-202f70b7ec7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");
     background: linear-gradient(45deg, rgba($bgBlue,0.3) 15%,rgba($bgOrange,0.3) 50%,rgba($bgLight,0.3) 85%),  url("https://images.unsplash.com/photo-1571993192866-202f70b7ec7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80") no-repeat center;
     background-size: cover;   
-    font-family: 'Kurale', serif;
+    font-family: 'Kurale', 'Georgia', serif;
     font-size: 1.1em;
     
     &-main{
