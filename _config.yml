@@ -8,10 +8,8 @@ github_username:  Martichka9
 collections: 
   vacations:
     output: true
-    permalink: /vacations/:path
   excursions:
     output: true
-    permalink: /excursions/:path
 collections_dir: collections
 
 exclude:
@@ -29,3 +27,4 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - README.md
