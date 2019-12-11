@@ -9,16 +9,13 @@ body.preloader-site {
         height: 100%;
         width: 100%;
         background: #FFF;
-        position: fixed;
-        top: 0;
-        left: 0;
         z-index: 9999999;
         display: block;
         opacity: 1;
         
         .preloader {
-            margin-top: 20vh;
-            // width: 20%;
+            margin: 20vh auto 0;
+            width: 50%;
         }
     }
 }
