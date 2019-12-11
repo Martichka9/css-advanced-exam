@@ -4,7 +4,8 @@ body.preloader-site {
     background-color: #e5eff1;
 
     .preloader-wrapper {
-        background-color: #e5eff1 !important;
+        // background-color: #e5eff1 !important;
+        position: absolute;
         height: 100%;
         width: 100%;
         background: #FFF;
@@ -12,18 +13,21 @@ body.preloader-site {
         top: 0;
         left: 0;
         z-index: 9999999;
+        display: block;
+        opacity: 1;
         
         .preloader {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            width: 20%;
+            margin-top: 20vh;
+            // width: 20%;
         }
     }
 }
 
 body.loaded{
-    .preloader-wrapper{display:none;}
+    .preloader-wrapper{
+        opacity: 0;
+        transition: opacity 2s ease-out;
+        display: none;
+        transition: display 0.5s ease-out 2s;
+    } 
 }
