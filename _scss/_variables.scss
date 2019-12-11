@@ -30,6 +30,7 @@ $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
 
 @mixin infoImgs {
     max-width: 300px;
+    width: 300px;
     height: 200px;
     position: absolute;
     top: calc(50% - 100px);

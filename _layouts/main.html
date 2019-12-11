@@ -13,27 +13,44 @@
 </head>
 <body class="site">
     {% include header.html %}
+    <div class="preloader-wrapper">
+        <div class="preloader">
+            <img src="https://icon-library.net/images/loading-gif-icon/loading-gif-icon-22.jpg" alt="pinimg">
+        </div>
+    </div>
     <main class="site-main">
         {{content}}
     </main>
     {% include footer.html %}
     
-    <script>
-        window.addEventListener('load', (event) => {
-            document.querySelector('body').classList.add('loaded');
-            window.onscroll = function() {myFunction()};
+    <script type="text/javascript">
+        document.onreadystatechange = () => {
+            console.log(document.readyState);
+            if(document.readyState === "interactive"){
+                console.log(document.readyState);
+                document.querySelector('body').classList.add('preloader-site');
+            }
+            else {
+                console.log(document.readyState);
+                document.querySelector('body').classList.remove('preloader-site');
+            }
+        }
 
+        window.addEventListener('load', (event) => {
+            window.onscroll = function() {stickyHeader()};
+            document.querySelector('body').classList.add('loaded');
+        });
+
+        function stickyHeader() {    
             var header = document.getElementsByClassName("site-header")[0];
             var sticky = header.offsetTop;
 
-            function myFunction() {
-                if (window.pageYOffset > sticky) {
-                    header.classList.add("sticky");
-                } else {
-                    header.classList.remove("sticky");
-                }
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
             }
-        });
+        }        
     </script>
 </body>
 </html>
