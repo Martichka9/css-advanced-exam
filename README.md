@@ -1,7 +1,7 @@
 # CSS Advanced exam site
 
 ## Github Pages
-https://martichka9.github.io/css-advanced-exam/
+[CSS Advanced Exam Site - Travel Inspire](https://martichka9.github.io/css-advanced-exam/)
 
 ## Development server
 
