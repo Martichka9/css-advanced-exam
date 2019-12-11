@@ -12,8 +12,10 @@ order: 3
             <p>Разгледайте нашите предложения и изберете най-подходящата за вас екскурзия!</p>
         </div>
     </article>
-    {% assign siteCollection = site.excursions %}
+    {% assign siteCollection = site.vacations %}
     {% for record in siteCollection %}
-        {% include record-template.html %}
+        {% if record.vac_type == "excursion" %}
+            {% include record-template.html %}
+        {% endif %}
     {% endfor %}
 </section>

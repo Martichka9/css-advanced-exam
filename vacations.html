@@ -13,6 +13,8 @@ order: 2
     </article>
     {% assign siteCollection = site.vacations %}
     {% for record in siteCollection %}
+    {% if record.vac_type == "vacation" %}
         {% include record-template.html %}
+    {% endif %}
     {% endfor %}
 </section>
