@@ -24,9 +24,39 @@
         }
         p{text-align: left;}
     }
+    body.preloader-site .preloader-wrapper .preloader {
+        width: 50%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+    .site .site-info-content,
+    .site .site-info-content .info-text,
+    .site .site-info-content .info-img  {
+        animation-delay: 0s !important;
+    }
+    .loaded nav{
+        li.home-page:nth-child(1){
+            transform: translateY(0px);
+            animation: none;
+        }
+        li.home-page:nth-child(2){
+            transform: translateY(0px);
+            animation: none;
+        }
+        li.home-page:nth-child(3){
+            transform: translateY(0px);
+            animation: none;
+        }
+        li.home-page:nth-child(4){
+            transform: translateY(0px);
+            animation: none;
+        }
+        li.home-page:nth-child(5){
+            transform: translateY(0px);
+            animation: none;
+        }
+    }
     .hf-container  {
         .site-nav {
             display:none;

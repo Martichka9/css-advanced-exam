@@ -105,3 +105,26 @@
     
     p{font-size: .8em;align-self: flex-end;justify-self: flex-end;text-align: right;}
 }
+
+.loaded nav{
+    li.home-page:nth-child(1){
+        transform: translateY(-200px);
+        animation: navBtns 1s ease-out 0.1s forwards;
+    }
+    li.home-page:nth-child(2){
+        transform: translateY(-200px);
+        animation: navBtns 1s ease-out 0.3s forwards;
+    }
+    li.home-page:nth-child(3){
+        transform: translateY(-200px);
+        animation: navBtns 1s ease-out 0.5s forwards;
+    }
+    li.home-page:nth-child(4){
+        transform: translateY(-200px);
+        animation: navBtns 1s ease-out 0.7s forwards;
+    }
+    li.home-page:nth-child(5){
+        transform: translateY(-200px);
+        animation: navBtns 1s ease-out 0.9s forwards;
+    }
+}

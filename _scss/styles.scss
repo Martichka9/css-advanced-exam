@@ -11,6 +11,7 @@
 @import "_about-styles.scss";
 @import "_contacts-styles.scss";
 @import "_content-pages-styles.scss";
+@import "_animations.scss";
 
 /*Main site styles*/
 .site {
@@ -36,17 +37,22 @@
     }
     /*Home, About, Contacts styles*/
     &-info-content {
-        @include infoArticleLayout;
+        @include infoArticleLayout;    
+        opacity: 0;    
+
         .info-text {
             @include infoTexts;
+            transform: translateX(1000px);
                 
             p, a, i, span{
                 color: white;
-                text-shadow: 0 0 3px #000;
+                text-shadow: 0 0 2px #000;
             }
         }
         .info-img {
             @include infoImgs;
+            transform: translateX(-1000px);
+            animation: homeAboutImg 2s ease-out 1.3s forwards;
         }
 
         div.info-text {
@@ -64,5 +70,26 @@
     /*404 page style*/
     .fof {
         .info-text {height: 100%;}
+    }
+}
+
+.loaded .site-info-content { 
+    animation : homeAboutBG 1s linear forwards;
+    animation-delay: 1.3s;
+
+    .info-text {
+        animation: homeAboutTxt 1s ease-out forwards;
+        animation-delay: 1.3s;
+    }
+}
+
+.loaded {
+    .about .site-info-content,
+    .contacts .site-info-content { 
+        animation-delay: 0s;
+    
+        .info-text {
+            animation-delay: 0s;
+        }
     }
 }

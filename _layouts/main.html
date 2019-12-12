@@ -17,6 +17,7 @@
         <div class="preloader">
             <!-- https://icon-library.net/images/loading-gif-icon/loading-gif-icon-22.jpg -->
             <img src="https://gifimage.net/wp-content/uploads/2018/04/preloading-gif-12.gif" alt="pinimg">
+            <p>Loading...</p>
         </div>
     </div>
     <main class="site-main">
@@ -40,6 +41,13 @@
         window.addEventListener('load', (event) => {
             window.onscroll = function() {stickyHeader()};
             document.querySelector('body').classList.add('loaded');
+            let itemArr = Array.from(document.getElementsByClassName('site-menu-item'));
+            if(itemArr[0].classList.contains('current-page')) 
+            {
+                itemArr.forEach(elem => {
+                    elem.classList.add('home-page');
+                })
+            }
         });
 
         function stickyHeader() {    

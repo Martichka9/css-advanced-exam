@@ -51,9 +51,13 @@
     }
         
     &:nth-child(even) {
+        .info-text {
+            animation: homeAboutImg 1.5s ease-out 1s forwards;
+        }
         .info-img {
             right: 9%;
             left: inherit;
+            animation: homeAboutTxt 1.5s ease-out 1s forwards;
         }
         h3{
             text-align: left;
