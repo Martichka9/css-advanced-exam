@@ -168,3 +168,8 @@
         li {list-style-type: disc;}
     }
 }
+.loaded .record-single-details article.record-card{
+    transform: translate(0px,0px);
+    opacity: 1;
+    animation: none;
+}
