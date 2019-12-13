@@ -10,6 +10,12 @@ $bgOrange: #f1a57e;
 $bgLight: #f7f4f3;
 $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
 
+
+@mixin displayFlex {
+    display: flex;
+    align-items: center;
+}
+
 @mixin headerFooterContainer{
     width: 100%;
     background-color: $primaryLightColor;
@@ -17,7 +23,6 @@ $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
 }
 
 @mixin infoArticleLayout {
-    text-align: center;
     position: relative;
     width: 95%;
     min-height: 300px;
@@ -59,4 +64,25 @@ $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
     padding: 1em;
     border-radius: $borderRadius;
     line-height: 20px;
+}
+
+@mixin SMHoverColors {
+    background-color: $primaryLightColor;
+    border-radius: 3px;
+    height: 26px;
+}
+
+@mixin navMainAnimationValues {
+    transform: translateY(-100px);
+    animation: navBtns 0.7s ease-out forwards;
+}
+
+@mixin recordMainAnimationValues {
+    transform: translate(1400px,-1400px);
+    animation: recordCard 1.5s ease-out forwards;
+}
+
+@mixin clearNavAnimation {
+    transform: translateY(0px);
+    animation: none;
 }

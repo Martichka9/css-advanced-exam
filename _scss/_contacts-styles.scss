@@ -30,13 +30,12 @@
         grid-template-columns: 50px auto auto;
         grid-template-rows: 25px auto auto auto;
         align-items: center;
-        text-align: center;
         padding: 1em 0;
         border-bottom: 1px solid white;
 
         i {
             grid-area: ico;
-            font-size: 1.5em;
+            font-size: 1.7em;
         }
         .contact-text-info{
             grid-area: txt;
@@ -56,6 +55,12 @@
             }
             .hours:nth-of-type(3){
                 grid-area: contact2;
+            }
+        }
+        &:nth-child(5){
+            grid-template-columns: auto auto auto;
+            .sm:hover i {
+                @include SMHoverColors;    
             }
         }
     }

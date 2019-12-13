@@ -16,16 +16,13 @@
     max-width: $maxWidth;
     height: 100%;
     margin: 0 auto;
-    display: flex;
+    @include displayFlex;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
+    
 
     .site-logo{
-        display: flex;
-        align-items: center;
-        font-family: 'Amatic SC', 'Buxton Sketch', 'Inc Free', cursive;
-        text-shadow: /*0 0 1px $shadowColor, 0 0 25px 5px #a6b3bd inset, */2px 2px 2px $shadowColor;
+        @include displayFlex;
+        text-shadow: 2px 2px 2px $shadowColor;
     }
     .site-menu #menu-btn {
         display: none;
@@ -37,7 +34,7 @@
     nav{
 
         ul {
-            display: flex;
+            @include displayFlex;
             justify-content: space-evenly;
         }
 
@@ -66,9 +63,10 @@
 
 .site-footer {
     padding: 1em;
+    h4{font-size: 1.3em;}
     .hf-container{flex-wrap: wrap;}
     
-    ul, h3, p {
+    ul li, h4 {
         text-align: left;
     }
 
@@ -76,23 +74,10 @@
         padding:5px;
         height: 100%;
         width: 300px;
-        
-        .sm {
-            font-size: 1.7em;
-            margin: 0 3px;
-        }
-        .fb:hover i {
-            color: #3b5998;
-
-        }
-        .tr:hover i {
-            color: #0084b4;
-
-        }
-        .fr:hover i {
-            color: #ff0084;
-
-        }
+    }        
+    .sm {
+        font-size: 1.7em;
+        margin: 0 3px;
     }
     .offers a {
         padding: 0.1em;
@@ -107,24 +92,12 @@
 }
 
 .loaded nav{
-    li.home-page:nth-child(1){
-        transform: translateY(-200px);
-        animation: navBtns 1s ease-out 0.1s forwards;
+    li.home-page{
+        @include navMainAnimationValues;
     }
-    li.home-page:nth-child(2){
-        transform: translateY(-200px);
-        animation: navBtns 1s ease-out 0.3s forwards;
-    }
-    li.home-page:nth-child(3){
-        transform: translateY(-200px);
-        animation: navBtns 1s ease-out 0.5s forwards;
-    }
-    li.home-page:nth-child(4){
-        transform: translateY(-200px);
-        animation: navBtns 1s ease-out 0.7s forwards;
-    }
-    li.home-page:nth-child(5){
-        transform: translateY(-200px);
-        animation: navBtns 1s ease-out 0.9s forwards;
-    }
+    li.home-page:nth-child(1){animation-delay: 0.1s;}
+    li.home-page:nth-child(2){animation-delay: 0.3s;}
+    li.home-page:nth-child(3){animation-delay: 0.5s;}
+    li.home-page:nth-child(4){animation-delay: 0.7s;}
+    li.home-page:nth-child(5){animation-delay: 0.9s;}
 }

@@ -4,9 +4,6 @@
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Kurale&display=swap');
 @import "_header-footer-styles.scss";
-@import 'responsive.scss';
-// @import "./fa/css/fontawesome.min.css";
-// @import "./fa/css/solid.min.css";
 @import "_home-style.scss";
 @import "_about-styles.scss";
 @import "_contacts-styles.scss";
@@ -16,24 +13,24 @@
 /*Main site styles*/
 .site {
     background: rgba($bgOrange,0.3);
-    background-image: url("https://images.unsplash.com/photo-1571993192866-202f70b7ec7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80");
-    background: linear-gradient(45deg, rgba($bgBlue,0.3) 15%,rgba($bgOrange,0.3) 50%,rgba($bgLight,0.3) 85%),  url("https://images.unsplash.com/photo-1571993192866-202f70b7ec7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80") no-repeat center;
+    background-image: url("https://images.unsplash.com/photo-1571993192866-202f70b7ec7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=40");
+    background: linear-gradient(45deg, rgba($bgBlue,0.3) 15%,rgba($bgOrange,0.3) 50%,rgba($bgLight,0.3) 85%),  url("https://images.unsplash.com/photo-1571993192866-202f70b7ec7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=40") no-repeat center;
     background-size: cover;   
     font-family: 'Kurale', 'Georgia', serif;
     font-size: 1.1em;
     
     &-main{
-        min-height: calc(100vh - 170px);
+        min-height: calc(100vh - 275px);
         width: 100%;
     }
     /*Content pages styles*/
     &-page-container {
         max-width: $maxWidth;
         margin: 0 auto;
-        display: flex;
+        @include displayFlex;
         flex-wrap: wrap;
         justify-content: center;
-        padding: 2em 0;
+        padding: 1.8em 0;
     }
     /*Home, About, Contacts styles*/
     &-info-content {
@@ -42,28 +39,19 @@
 
         .info-text {
             @include infoTexts;
-            transform: translateX(1000px);
-                
-            p, a, i, span{
-                color: white;
-                text-shadow: 0 0 2px #000;
-            }
         }
         .info-img {
             @include infoImgs;
-            transform: translateX(-1000px);
-            animation: homeAboutImg 2s ease-out 1.3s forwards;
         }
 
         div.info-text {
-            display: flex;
+            @include displayFlex;
             flex-direction: column;
             justify-content: center;
             width: 100%;
     
             h3 {
                 font-size: 1.7em;    
-                text-align: center;
             }
         }
     }
@@ -73,13 +61,36 @@
     }
 }
 
+.info-text {
+    p, a, i, span{
+        color: white;
+        text-shadow: 0 0 2px #000;
+    }
+}
+/*Home, ABout and contacts animations after page load*/
 .loaded .site-info-content { 
     animation : homeAboutBG 1s linear forwards;
     animation-delay: 1.3s;
 
     .info-text {
-        animation: homeAboutTxt 1s ease-out forwards;
+        transform: translateX(-1000px);
+        animation: homeAboutTxtImg 1s ease-out forwards;
         animation-delay: 1.3s;
+    }
+    .info-img {
+        transform: translateX(1000px);
+        animation: homeAboutTxtImg 1s ease-out forwards;
+    }
+    &:nth-child(even) {
+        .info-text {
+            transform: translateX(1000px);
+            animation: homeAboutTxtImg 1s ease-out forwards;
+            animation-delay: 1.3s;
+        }
+        .info-img {
+            transform: translateX(-1000px);
+            animation: homeAboutTxtImg 1s ease-out forwards;
+            animation-delay: 1.3s;}
     }
 }
 
@@ -92,4 +103,18 @@
             animation-delay: 0s;
         }
     }
+}
+
+/*Social media links*/
+.fb:hover i {
+    color: #3b5998;
+
+}
+.tr:hover i {
+    color: #0084b4;
+
+}
+.fr:hover i {
+    color: #ff0084;
+
 }

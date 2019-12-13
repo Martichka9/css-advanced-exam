@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     color: $shadowColor;
+    text-align: center;
 }
 
 a {
@@ -16,4 +17,7 @@ ul {
 
 img {
     width: 100%;
+}
+h1, h2, h3, h3 q, h3 div {
+    font-family: 'Amatic SC', 'Buxton Sketch', 'Inc Free', cursive;
 }

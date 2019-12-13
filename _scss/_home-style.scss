@@ -1,11 +1,10 @@
-.site-info-content {
+.loaded .site-info-content {
 
     .home-img {
         top: 23% !important;
     }
 
     h2, h3, h3 q, h3 div {
-        font-family: 'Amatic SC', 'Buxton Sketch', 'Inc Free', cursive;
         color: $primaryLightColor;
     }
     h2 {
@@ -21,7 +20,6 @@
         grid-template-columns: 10% auto 10%;
         grid-template-rows: auto auto auto;
         gap: 1em 0;
-        text-align: right;
         
         q{
             grid-column: 2;
@@ -51,13 +49,9 @@
     }
         
     &:nth-child(even) {
-        .info-text {
-            animation: homeAboutImg 1.5s ease-out 1s forwards;
-        }
         .info-img {
             right: 9%;
             left: inherit;
-            animation: homeAboutTxt 1.5s ease-out 1s forwards;
         }
         h3{
             text-align: left;
@@ -71,7 +65,10 @@
     &:nth-child(odd) {
         h3 {
             right: -30%;
-            text-align: right;
+        }
+        .info-img {
+            animation: homeAboutTxtImg 1s ease-out forwards;
+            animation-delay: 0.7s;
         }
     }
 }

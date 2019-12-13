@@ -1,17 +1,10 @@
 @keyframes navBtns {
-    from{transform: translatey(-200px);}
-    to{transform: translateX(0);}
+    to{transform: translateY(0);}
 }
 @keyframes homeAboutBG {
-    from{opacity:0}
     to{opacity:1}
 }
-@keyframes homeAboutTxt {
-    from{transform: translateX(-1000px);}
-    to{transform: translateX(0);}
-}
-@keyframes homeAboutImg {
-    from{transform: translateX(1000px);}
+@keyframes homeAboutTxtImg {
     to{transform: translateX(0);}
 }
 @keyframes recordCard {

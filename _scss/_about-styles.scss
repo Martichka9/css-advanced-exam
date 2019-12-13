@@ -1,17 +1,15 @@
 .site-info-content {
+    .about & {@include displayFlex;}
 
     blockquote.info-text {
-        min-height: 100%;
-        display: flex;
-        align-items: center;
         text-align: left;
     }
 
     &:nth-child(odd) {
         blockquote {
             right: -30%;
-            text-align: right;
         }
+        p{text-align: right;}
     }
     
     &:nth-child(even) {
@@ -19,5 +17,6 @@
             right: 2%;
             left: initial;
         }
+        p{text-align: left;}
     }
 }

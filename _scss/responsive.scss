@@ -1,3 +1,5 @@
+@import "_variables.scss";
+
 @media only screen and (max-width: 1040px) {
     .hf-container{
         justify-content: center;
@@ -35,28 +37,16 @@
     .site .site-info-content .info-img  {
         animation-delay: 0s !important;
     }
-    .loaded nav{
-        li.home-page:nth-child(1){
-            transform: translateY(0px);
-            animation: none;
-        }
-        li.home-page:nth-child(2){
-            transform: translateY(0px);
-            animation: none;
-        }
-        li.home-page:nth-child(3){
-            transform: translateY(0px);
-            animation: none;
-        }
-        li.home-page:nth-child(4){
-            transform: translateY(0px);
-            animation: none;
-        }
-        li.home-page:nth-child(5){
-            transform: translateY(0px);
-            animation: none;
+    .loaded header nav.site-nav{
+        li.home-page {
+            @include clearNavAnimation;
         }
     }
+
+    .loaded section.site-page-container article.record-card {
+            transform: translate(0px,0px) !important;
+        }
+    
     .hf-container  {
         .site-nav {
             display:none;
@@ -64,8 +54,7 @@
 
         .site-menu label {
             position: relative;
-            display: flex;
-            align-content: center;
+            @include displayFlex;
             width: 100%;
         }
 
@@ -98,7 +87,7 @@
 
 @media only screen and (max-width: 720px) {
     section.site-page-container{padding: 1em;}
-    .about, .home {
+    .loaded .about, .loaded .home {
         .info-text {
             width: 100%;
         }
@@ -110,14 +99,14 @@
             right: 0;
             margin: auto;
         }
-        .site-info-content .home-img,
-        article:nth-child(even) .home-img {
+        
+        article.site-info-content .home-img {
             top: 2% !important;
             left: 0;
             right: 0;
             margin: 0 auto;
         }
-        .site-info-content .info-text, :not(h3), :not(h2) {
+        article.site-info-content .info-text, .site-info-content:nth-child(odd) h3.info-text, :not(h3), :not(h2) {
             right: 0;
             width: 100%;
             text-align: justify;
@@ -127,7 +116,7 @@
 }
 
 @media only screen and (max-width: 540px) {
-    .site-page-container {
+    .loaded .site-page-container {
         .site-info-content {
             grid-template-rows: 0 135px;
         }
