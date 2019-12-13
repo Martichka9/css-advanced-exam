@@ -1,6 +1,7 @@
 @import "_variables.scss";
 
 @media only screen and (max-width: 1040px) {
+    section.site-page-container{padding: 1em;}
     .hf-container{
         justify-content: center;
 
@@ -91,7 +92,6 @@
 }
 
 @media only screen and (max-width: 720px) {
-    section.site-page-container{padding: 1em;}
     .loaded .about, .loaded .home {
         .info-text {
             width: 100%;
