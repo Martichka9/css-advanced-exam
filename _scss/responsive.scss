@@ -39,7 +39,7 @@
     }
     .loaded header nav.site-nav{
         li.home-page {
-            @include clearNavAnimation;
+            @include clearAnimation;
         }
     }
 
@@ -83,6 +83,11 @@
             }
         }
     }
+    .loaded .vacations, .loaded .excursions, .loaded .contacts {
+        .site-info-content .info-text {
+            @include clearAnimation;
+        }
+    }
 }
 
 @media only screen and (max-width: 720px) {
@@ -106,7 +111,7 @@
             right: 0;
             margin: 0 auto;
         }
-        article.site-info-content .info-text, .site-info-content:nth-child(odd) h3.info-text, :not(h3), :not(h2) {
+        article.site-info-content .info-text, :not(h3), :not(h2), article:nth-child(odd) p {
             right: 0;
             width: 100%;
             text-align: justify;

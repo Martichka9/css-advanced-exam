@@ -82,7 +82,8 @@ $discountColor: linear-gradient(135deg,#9ccc9c 0,green 75%);
     animation: recordCard 1.5s ease-out forwards;
 }
 
-@mixin clearNavAnimation {
+@mixin clearAnimation {
+    transform: translateX(0px);
     transform: translateY(0px);
     animation: none;
 }
