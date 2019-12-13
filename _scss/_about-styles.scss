@@ -5,7 +5,7 @@
         text-align: left;
     }
 
-    &:nth-child(odd) {
+    .about &:nth-child(odd) {
         blockquote {
             right: -30%;
         }
